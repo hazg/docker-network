@@ -4,7 +4,12 @@ services:
     image: nginx
     networks:
       - web
+    ports:
+      - 80:80
+    volumes:
+      - ./sites:/etc/nginx/sites-enabled/
 
 networks:
   web:
+    driver: bridge
 

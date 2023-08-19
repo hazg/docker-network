@@ -1,9 +1,13 @@
 version: "3.9"
 services:
   web:
-    image: node
     build: ./
+    hostname: two
     networks:
-      - web
+      - two
+    volumes:
+      - ./src:/app
 networks:
-  web:
+  nginx:
+    external: true
+  two:

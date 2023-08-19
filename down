@@ -1,0 +1,4 @@
+#!/bin/bash
+docker-compose -f nginx/compose.yml down
+docker-compose -f one/compose.yml down
+docker-compose -f two/compose.yml down
