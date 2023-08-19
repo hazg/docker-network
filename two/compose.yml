@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  web:
+    image: node
+    build: ./
+    networks:
+      - web
+networks:
+  web:
