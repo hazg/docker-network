@@ -3,12 +3,11 @@ services:
   web:
     build: ./
     networks:
-      - one
+      one:
     volumes:
       - ./src:/app
     ports:
       - 3000:3000
 networks:
   nginx_web:
-    external: true
   one:
