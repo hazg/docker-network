@@ -3,7 +3,7 @@ services:
     build: ./
     container_name: one
     networks:
-      - nginx_network      # proxy and app must be in same network
+      - nginx_network
     volumes:
       - ./src:/app
 networks:
