@@ -1,15 +1,12 @@
-version: "3.9"
 services:
-  web:
+  nginx:
     build: ./
-    networks:
-      - web
     ports:
-      - 80:80
-    volumes:
-      - ./sites:/etc/nginx/sites-enabled/
-
+      - "80:80"
+      - "443:443"
+    networks:
+      - nginx_network
 networks:
-  web:
-
+  nginx_network:
+    external: true
 

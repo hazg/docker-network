@@ -1,13 +1,24 @@
-version: "3.9"
 services:
-  web:
+  two:
     build: ./
-    hostname: two
+    container_name: two
     networks:
-      - two
+      - nginx_network      # proxy and app must be in same network
     volumes:
       - ./src:/app
 networks:
-  nginx:
+  nginx_network:
     external: true
-  two:
+# version: "3.9"
+# services:
+#   web:
+#     build: ./
+#     hostname: two
+#     networks:
+#       - two
+#     volumes:
+#       - ./src:/app
+# networks:
+#   nginx:
+#     external: true
+#   two:
