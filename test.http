@@ -1,0 +1,17 @@
+POST http://one/test/1
+Content-Type: application/json
+
+{
+  "param1": "Value1",
+  "param2": "Value2"
+}
+
+###
+
+POST http://two/test/2
+Content-Type: application/json
+
+{
+  "param1": "Value1",
+  "param2": "Value2",
+}

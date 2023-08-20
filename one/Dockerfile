@@ -1,8 +1,8 @@
-FROM node
+FROM node:18
 
 WORKDIR /app
 COPY src/package.json .
 COPY src/package-lock.json .
 RUN npm install
 
-CMD node main.js
+CMD node --watch one.js

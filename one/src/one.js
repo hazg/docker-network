@@ -6,7 +6,9 @@ const port = 3000;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World from TWO');
+  res.end('Hello World from ONE');
+  console.log('URL', req.url)
+  console.log(req.headers)
 });
 
 server.listen(port, hostname, () => {
