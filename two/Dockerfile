@@ -7,8 +7,7 @@ RUN apt -y \
   iputils-ping
 
 WORKDIR /app
-COPY src/package.json .
-COPY src/package-lock.json .
-RUN npm install
 
-CMD node --watch two.js
+CMD \
+  npm install; \
+  node --watch two.js

@@ -1,5 +1,5 @@
 #!/bin/bash
-docker-compose -f nginx/compose.yml down
-docker-compose -f one/compose.yml down
-docker-compose -f two/compose.yml down
-docker-compose -f db/compose.yml down
+docker-compose -f nginx/compose.yml down --volumes
+docker-compose -f one/compose.yml down --volumes
+docker-compose -f two/compose.yml down --volumes
+docker-compose -f db/compose.yml down --volumes
