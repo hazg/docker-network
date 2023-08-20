@@ -7,8 +7,9 @@ services:
     networks:
       - nginx_network
     volumes:
-      - ./sites:/etc/nginx/sites-enabled/
+      - ./sites:/etc/nginx/sites-available/
       - ./conf/nginx.conf:/etc/nginx/nginx.conf
+      - ./sites1:/etc/nginx/sites-enables/
 networks:
   nginx_network:
     external: true
