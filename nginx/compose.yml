@@ -10,6 +10,7 @@ services:
       - ./sites:/etc/nginx/sites-available/
       - ./conf/nginx.conf:/etc/nginx/nginx.conf
       - ./sites1:/etc/nginx/sites-enables/
+      - ./certs:/etc/letsencrypt/
 networks:
   nginx_network:
     external: true
