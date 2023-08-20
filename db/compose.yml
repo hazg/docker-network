@@ -1,0 +1,27 @@
+services:
+  postgres:
+    image: postgres
+    hostname: db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
+      PGDATA: /data/postgres
+    volumes:
+       - ./data/postgres:/data/postgres:rw
+       - ./data/init-data:/docker-entrypoint-initdb.d
+    ports:
+      - 5432:5432
+    networks:
+      - db_network
+    restart: unless-stopped
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+    networks:
+      - db_network
+
+networks:
+  db_network:
+    external: true

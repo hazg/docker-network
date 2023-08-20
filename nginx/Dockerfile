@@ -4,5 +4,5 @@ RUN apt update
 RUN apt -y \
   install \
   curl \
-  iputils-ping -y \
+  iputils-ping \
   certbot

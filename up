@@ -2,5 +2,6 @@
 docker-compose -f nginx/compose.yml up -d --build
 docker-compose -f one/compose.yml up -d --build
 docker-compose -f two/compose.yml up -d --build
+docker-compose -f db/compose.yml up -d --build
 
 # docker run -it nginx_web bash

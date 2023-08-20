@@ -4,8 +4,18 @@ services:
     hostname: two
     networks:
       - nginx_network
+      - db_network
     volumes:
       - ./src:/app
+  adminer:
+    image: adminer
+    ports:
+      - 81:8080
+    networks:
+      - db_network
+
 networks:
+  db_network:
+    external: true
   nginx_network:
     external: true

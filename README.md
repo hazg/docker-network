@@ -10,4 +10,5 @@ Edit /etc/hosts on **host** machine
 
 ```bash
 docker network create nginx_network
+docker network create db_network
 ```
