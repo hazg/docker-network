@@ -16,7 +16,7 @@ async function testQuery() {
   })
 
   const result = await client.query('SELECT NOW()')
-  console.log('RESULT: ',result)
+  console.log('RESULT: ', result)
 
 }
 
