@@ -1,4 +1,8 @@
 FROM nginx
 
 RUN apt update
-RUN apt install curl iputils-ping -y
+RUN apt -y \
+  install \
+  curl \
+  iputils-ping -y \
+  certbot
