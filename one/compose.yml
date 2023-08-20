@@ -1,7 +1,7 @@
 services:
-  one:
+  app:
     build: ./
-    container_name: one
+    hostname: one
     networks:
       - nginx_network
     volumes:
